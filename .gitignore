@@ -1,0 +1,6 @@
+[glob]
+
+*.ipr
+*.iml
+*.iws
+*.class

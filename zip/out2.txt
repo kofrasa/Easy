@@ -1,0 +1,39 @@
+First pass...
+1. x
+2. y
+3. begin
+4.  read x
+5.  read y
+6.  write x
+7.  write y
+8.  halt
+9. end
+
+----------------------
+Addresses of variables and constants
+x: 9
+y: 10
+
+--------------
+
+Second pass...
+1. x
+2. y
+3. begin
+4.  read x
+		[0] 10009
+5.  read y
+		[1] 10010
+6.  write x
+		[2] 20009
+		[3] 21999
+		[4] 11999
+7.  write y
+		[5] 20010
+		[6] 21999
+		[7] 11999
+8.  halt
+		[8] 43000
+9. end
+		[9] 0
+		[10] 0

@@ -1,0 +1,36 @@
+//errors indicated by 99x being written
+//smaller numbers are printed for correct jumps
+begin
+ if 2<3 goto skip1
+ write 991
+skip1:
+  write 1
+ if 3<2 goto skip2
+ write 2
+ goto skip3
+skip2:
+ write 992
+skip3:
+ if 3==2 goto skip4
+ write 3
+ goto skip5
+skip4:
+ write 993
+skip5:
+ if 3==3 goto skip6
+ write 994
+skip6:
+ write 4
+ if 3<=4 goto skip7
+ write 995
+skip7:
+ write 5
+ if 4<=3 goto skip8
+ write 6
+ goto skip9
+skip8:
+ write 996
+skip9:
+ halt
+end
+

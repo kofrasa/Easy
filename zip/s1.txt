@@ -1,0 +1,9 @@
+x
+y
+begin
+ x=5
+ y=4
+ write x*y+2
+ halt
+end
+

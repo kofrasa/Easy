@@ -1,0 +1,12 @@
+//should not print 991
+x
+y
+begin
+ x=4
+ y=5
+ if x*y >= (x-1)*y goto skip1
+ write 991
+skip1:
+ write 1
+ halt
+end

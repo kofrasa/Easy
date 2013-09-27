@@ -1,0 +1,39 @@
+//you have coded incorrectly if numbers
+//of the form 99x print. The program should
+//only print small number
+
+begin
+  if 3>2 goto skip1
+  write 991
+skip1:
+  write 1
+  if 2>3 goto skip2
+  write 2
+  goto skip3
+skip2:
+  write 992
+skip3:
+  if 2>=2 goto skip4
+  write 993
+skip4:
+  write 3
+  if 2>=3 goto skip5
+  write 4
+  goto skip6
+skip5:
+  write 994
+skip6:
+  if 2!=2 goto skip7
+  write 5
+  goto skip8
+skip7:
+  write 999
+skip8:
+  if 2!=3 goto skip9
+  write 996
+  halt
+skip9:
+  write 6
+  halt
+end
+

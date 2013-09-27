@@ -1,0 +1,11 @@
+x
+y
+begin
+  x=2
+  y=3
+  write x-1
+  write x*(x+1)*(x-1)
+  write x*(x+1)*(x-3*(y-2))
+  write 5*(x+y)/(x+2*y)
+  halt
+end
