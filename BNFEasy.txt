@@ -1,0 +1,37 @@
+BNF for the Easy Language. Uppercase words denote non-termials.
+Lower case letters and symbols are terminals. The following are
+meta-symbols:  |, [, ], {, }, \(,  /)
+(The last two meta symbols are used to distinguish them from the
+ terminals ( and ))
+-------------------------------------------------------------------
+
+PROGRAM --> DECLARATIONS LINES end
+
+  LINES -->  [IDENT : ] LINE '\n' { [IDENT : ] LINE '\n' }
+
+LINE --> IDENT = EXPRESSION |
+                 if EXPRESSION LOGIC EXPRESSION goto IDENT |
+                 goto IDENT |
+                 halt |
+                 read IDENT |
+                 write EXPRESSION |
+                 LAMBDA                   (LAMBDA indicates "nothing" {})
+
+DECLARATIONS --> { [IDENT] '\n' } begin '\n'
+
+EXPRESSION --> TERM { \(+|-\) TERM } 
+
+TERM --> FACTOR { \( *|/ \) FACTOR } 
+
+FACTOR --> ( EXPRESSION ) | IDENT | NUMBER
+
+IDENT -->  LETTER { \( LETTER | DIGIT \) }
+
+NUMBER --> DIGIT {DIGIT}
+
+LETTER --> a | b | c | ... |z
+
+DIGIT --> 0 | 1 | 2 | 3 |... | 9
+
+LOGIC --> < | <= | > | >= | == | !=
+
